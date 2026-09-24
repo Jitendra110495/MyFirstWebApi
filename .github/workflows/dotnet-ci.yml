@@ -23,10 +23,10 @@ jobs:
           dotnet-version: '10.0.x'
 
       - name: Restore dependencies
-        run: dotnet restore
+        run:  dotnet restore MyFirstWebApi/MyFirstWebApi.csproj
 
       - name: Build
-        run: dotnet build --no-restore
+        run: dotnet build MyFirstWebApi/MyFirstWebApi.csproj --no-restore
 
       - name: Test
-        run: dotnet test --no-build
+        run: dotnet test MyFirstWebApi.Tests/MyFirstWebApi.Tests.csproj
